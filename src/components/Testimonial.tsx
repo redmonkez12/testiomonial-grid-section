@@ -24,8 +24,8 @@ export function Testimonial({ title, text, name, personTitle, photoUrl, quotes =
                 <div className={"relative w-[1.75rem] h-[1.75rem]"}>
                     <Image className={clsx("rounded-full", {"border-2 border-lightPurple": variant === "purple"})} src={photoUrl} fill alt={"Person image"}/>
                 </div>
-                <div className={clsx({"text-darkGrey": variant === "white", "text-white": variant !== "white" })}>
-                    <h2 className={"text-[0.8125em] leading-[0.8125em]"}>{name}</h2>
+                <div className={clsx({"text-darkGrey font-medium": variant === "white", "text-white": variant !== "white" })}>
+                    <h2 className={"text-[0.8125em] leading-[0.8125em] "}>{name}</h2>
                     <p className={"opacity-50 text-[0.6875rem] leading-[0.6875rem] mt-0.5"}>{personTitle}</p>
                 </div>
             </div>
