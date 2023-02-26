@@ -1,91 +1,59 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
+import { Barlow_Semi_Condensed } from 'next/font/google'
+import { Testimonial } from "@/components/Testimonial";
 
-const inter = Inter({ subsets: ['latin'] })
+const barlowSemiCondensed = Barlow_Semi_Condensed({
+    subsets: ['latin'],
+    weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"]
+})
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
+    return (
+        <main className={`${barlowSemiCondensed.className} grid gap-6 mx-auto w-main`}>
+            <Testimonial
+                title={"I received a job offer mid-course, and the subjects I learned were current, if not more so, in the company I joined. I honestly feel I got every penny’s worth."}
+                text={"“ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a transition and have heard some people who had an amazing experience here. I signed up for the free intro course and found it incredibly fun! I enrolled shortly thereafter. The next 12 weeks was the  best - and most grueling - time of my life. Since completing the course, I’ve  successfully switched careers, working as a Software Engineer at a VR startup. ”"}
+                personTitle={"Daniel Clifford"}
+                name={"Verified Graduate"}
+                photoUrl={"/images/image-daniel.jpg"}
+                variant={"purple"}
+                quotes
             />
-          </a>
-        </div>
-      </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
+            <Testimonial
+                title={"The team was very supportive and kept me motivated"}
+                text={"“ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer for a big company. This was one of the best investments I’ve made in myself. “"}
+                personTitle={"Jonathan Walters"}
+                name={"Verified Graduate"}
+                photoUrl={"/images/image-jonathan.jpg"}
+                variant={"grey"}
+            />
 
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+            <Testimonial
+                title={"An overall wonderful and rewarding experience"}
+                text={"“ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living while doing something I love. ”"}
+                personTitle={"Jeanette Harmon"}
+                name={"Verified Graduate"}
+                photoUrl={"/images/image-jeanette.jpg"}
+                variant={"white"}
+            />
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
+            <Testimonial
+                title={"Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and learning from their experiences was easy."}
+                text={"“ The staff seem genuinely concerned about my progress which I find really refreshing. The program gave me the confidence necessary to be able to go out in the world and present myself as a capable junior developer. The standard is above the rest. You will get the personal attention you need from an incredible community of smart and amazing people. ”"}
+                personTitle={"Patrick Abrams"}
+                name={"Verified Graduate"}
+                photoUrl={"/images/image-patrick.jpg"}
+                variant={"black"}
+            />
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+            <Testimonial
+                title={"Such a life-changing experience. Highly recommended!"}
+                text={"“ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from professionals who can help me learn programming step by step. I was encouraged to enroll by a former student of theirs who can only say wonderful things about the program. The entire curriculum and staff did not disappoint. They were very hands-on and I never had to wait long for assistance. The agile team project, in particular, was outstanding. It took my learning to the next level in a way that no tutorial could ever have. In fact, I’ve often referred to it during interviews as an example of my developent experience. It certainly helped me land a job as a full-stack developer after receiving multiple offers. 100% recommend! ”"}
+                personTitle={"Kira Whittle"}
+                name={"Verified Graduate"}
+                photoUrl={"/images/image-kira.jpg"}
+                variant={"white"}
+            />
+        </main>
+    )
 }
